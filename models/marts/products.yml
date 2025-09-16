@@ -24,3 +24,11 @@ semantic_models:
         type: categorical
       - name: product_price
         type: categorical
+    columns:
+      - name: product_type
+        description: The type of each product
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["jaffle", "beverage"]

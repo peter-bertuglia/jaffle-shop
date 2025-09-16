@@ -47,6 +47,7 @@ joined as (
 
         products.product_name,
         products.product_price,
+        products.product_type,
         products.is_food_item,
         products.is_drink_item,
 

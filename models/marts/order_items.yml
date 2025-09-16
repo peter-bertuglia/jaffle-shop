@@ -8,8 +8,16 @@ models:
       - name: order_id
         data_tests:
           - relationships:
-              to: ref('orders')
-              field: order_id
+              arguments:
+                to: ref('orders')
+                field: order_id
+      - name: product_type
+        description: The type of each product
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["jaffle", "beverage"]
 
 unit_tests:
   - name: test_supply_costs_sum_correctly
